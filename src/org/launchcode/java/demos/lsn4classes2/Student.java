@@ -1,7 +1,7 @@
 package org.launchcode.java.demos.lsn4classes2;
 
 public class Student {
-
+// declares instance variables
     private static int nextStudentId = 1;
     private String name;
     private int studentId;
@@ -48,6 +48,7 @@ public class Student {
     public String getName() {
         return name;
     }
+
 
     public int getStudentId() {
         return studentId;
