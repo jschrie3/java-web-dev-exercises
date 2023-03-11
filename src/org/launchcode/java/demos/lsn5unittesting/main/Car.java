@@ -46,7 +46,12 @@ public class Car {
         return gasTankLevel;
     }
 
+    // TODO: We need to refactor Car to throw an exception when too much gas is added to the tank.
+    //  Find the setGasTankLevel method and modify it:
     public void setGasTankLevel(double gasTankLevel) {
+        if (gasTankLevel > this.getGasTankSize()) { // if tank level is greater than tank size
+            throw new IllegalArgumentException("Can't exceed tank size"); // throw an error
+        }
         this.gasTankLevel = gasTankLevel;
     }
 
@@ -83,6 +88,12 @@ public class Car {
         double gallonsUsed = milesAbleToTravel / this.milesPerGallon;
         this.gasTankLevel = this.gasTankLevel - gallonsUsed;
         this.odometer += milesAbleToTravel;
+    }
+
+    // TODO: Update the Car class to include an addGas() method.
+    public void addGas(double gas){
+        // the amount of gas gotten plus the gas already in the tank should is the new gas tank level
+        this.setGasTankLevel(gas + this.getGasTankLevel());
     }
 
 }
