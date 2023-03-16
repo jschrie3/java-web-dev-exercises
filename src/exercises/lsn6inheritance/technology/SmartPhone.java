@@ -8,7 +8,7 @@ public class SmartPhone extends Computer {
 
     // subclass does not inherit constructor from Computer unless we use super keyword
     public SmartPhone (boolean isIphone, String operatingSystem,boolean isPortable, boolean hasToBePluggedIn, double weight) {
-        super(operatingSystem,isPortable, hasToBePluggedIn, weight) // super must be at the top of the subclass constructor
+        super(operatingSystem,isPortable, hasToBePluggedIn, weight); // super must be at the top of the subclass constructor
         this.isIphone = isIphone;
     }
     /* Methods (1) */
